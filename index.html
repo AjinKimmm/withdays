@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Withdays</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 브라우저 기본 스타일을 reset합니다 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Withdays</title>
 </head>
 <body>
-    <!-- 달력표시  -->
-    <div class = "cal">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FSeoul&amp;src=a29jdXlhMTIzNEBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=a28uc291dGhfa29yZWEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <div class="calendar">
+    <div class="header">
+      <div class="year-month"></div>
+      <div class="nav">
+        <!-- 지난달로 -->
+        <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+        <!-- 오늘로 이동버튼 -->
+        <button class="nav-btn go-today" onclick="goToday()">오늘로 이동</button>
+        <!-- 다음달로 -->
+        <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+      </div>
     </div>
+    <div class="main">
+      <div class="days">
+        <div class="day">SUN</div>
+        <div class="day">MON</div>
+        <div class="day">TUE</div>
+        <div class="day">WED</div>
+        <div class="day">THU</div>
+        <div class="day">FRI</div>
+        <div class="day">SAT</div>
+      </div>
+      <div class="dates"></div>
+    </div>
+  </div>
+  <script src="index.js"></script>
 </body>
 </html>
